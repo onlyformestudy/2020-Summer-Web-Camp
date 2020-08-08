@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
     
-<%@page import="com.javatpoint.dao.UserDao"%>  
+<%@page import="com.javatpoint.dao.BookDao"%>  
 
 <!DOCTYPE html>
 <html>
@@ -13,16 +13,16 @@
 <body>
 
 	
-	<jsp:useBean id="u" class="com.javatpoint.bean.User"></jsp:useBean>
+	<jsp:useBean id="u" class="com.javatpoint.bean.Book"></jsp:useBean>
 	<jsp:setProperty property="*" name="u" />
 
 	<%
-		int i = UserDao.save(u);
-	if (i > 0) {
-		response.sendRedirect("adduser-success.jsp");
-	} else {
-		response.sendRedirect("adduser-error.jsp");
-	}
+		int i = BookDao.save(u);
+		if (i > 0) {
+			response.sendRedirect("adduser-success.jsp");
+		} else {
+			response.sendRedirect("adduser-error.jsp");
+		}
 	%>
 
 </body>

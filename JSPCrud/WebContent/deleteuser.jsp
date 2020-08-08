@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@page import="com.javatpoint.dao.UserDao"%>
-	<jsp:useBean id="u" class="com.javatpoint.bean.User"></jsp:useBean>
+	<%@page import="com.javatpoint.dao.BookDao"%>
+	<jsp:useBean id="u" class="com.javatpoint.bean.Book"></jsp:useBean>
 	<jsp:setProperty property="*" name="u" />
 	<%
-		UserDao.delete(u);
-	response.sendRedirect("viewusers.jsp");
+		BookDao.delete(u);
+		response.sendRedirect("viewusers.jsp");
 	%>
 </body>
 </html>

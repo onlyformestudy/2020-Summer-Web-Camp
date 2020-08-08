@@ -7,11 +7,11 @@
 <title>Edit Form</title>
 </head>
 <body>
-	<%@page import="com.javatpoint.dao.UserDao,com.javatpoint.bean.User"%>
+	<%@page import="com.javatpoint.dao.BookDao,com.javatpoint.bean.Book"%>
 
 	<%
 		String id = request.getParameter("id");
-	User u = UserDao.getRecordById(Integer.parseInt(id));
+			Book u = BookDao.getRecordById(Integer.parseInt(id));
 	%>
 
 	<h1>Edit Form</h1>
